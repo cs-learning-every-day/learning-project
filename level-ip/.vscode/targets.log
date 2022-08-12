@@ -1,0 +1,604 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Aug 11 10:33:11 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
+# default
+.SHELLFLAGS := -c
+# environment
+GREP_COLOR = 1;33
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 1)
+CPPFLAGS = -I include -Wall -Werror -pthread
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+NEMU_HOME = /home/tesla/cs/ics2021/nemu
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /home/tesla/cs/learning-project/level-ip
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"e1243840abbb4e31a890d397033a9abf.zh-cn","_translationsConfigFile":"/home/tesla/.vscode-server/data/clp/e1243840abbb4e31a890d397033a9abf.zh-cn/tcf.json","_cacheRoot":"/home/tesla/.vscode-server/data/clp/e1243840abbb4e31a890d397033a9abf.zh-cn","_resolvedLanguagePackCoreLocation":"/home/tesla/.vscode-server/data/clp/e1243840abbb4e31a890d397033a9abf.zh-cn/da76f93349a72022ca4670c1b84860304616aaa2","_corruptedFile":"/home/tesla/.vscode-server/data/clp/e1243840abbb4e31a890d397033a9abf.zh-cn/corrupted.info","_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# 'override' directive
+GNUMAKEFLAGS := 
+# makefile (from 'Makefile', line 6)
+apps = apps/curl/curl
+# environment
+VSCODE_CWD = /mnt/c/Users/sunhu/AppData/Local/Programs/Microsoft VS Code
+# environment
+AM_HOME = /home/tesla/cs/ics2021/abstract-machine
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/tesla/.vscode-server/bin/da76f93349a72022ca4670c1b84860304616aaa2/bin/remote-cli:/home/tesla/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Java/jdk-11.0.6/bin:/mnt/c/Program Files/Java/jdk-11.0.6/jre/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/Users/sunhu/Documents/Study/Tool/hugo:/mnt/c/Users/sunhu/AppData/Local/Programs/Python/Python39:/mnt/c/Users/sunhu/Documents/Study/Tool/jad:/mnt/c/Users/sunhu/AppData/Local/Programs/Python/Python39/Scripts:/mnt/c/Users/sunhu/Documents/Study/Tool/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/SMLNJ/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Go/bin:/mnt/c/Users/sunhu/AppData/Local/Programs/Python/Python310:/mnt/c/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/sunhu/AppData/Local/pnpm:/mnt/c/Users/sunhu/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/sunhu/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/sunhu/node_global:/mnt/c/Program Files/JetBrains/IntelliJ IDEA 2021.3.2/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA 2020.2.3/plugins/maven/lib/maven3/bin:/mnt/c/Users/sunhu/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/sunhu/Documents/Study/Tool/apache-tomcat-9.0.45/bin:/mnt/c/Users/sunhu/Documents/Study/Tool/nmap-7.91:/mnt/c/Users/sunhu/AppData/Roaming/npm:/mnt/c/Users/sunhu/go/bin:/usr/local/go/bin
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
+# environment
+BSH = /home/tesla/.bashrc
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-d6baf2a0-312f-409b-b092-fb485583a144.sock
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = 172.28.144.1:0
+# environment
+PWD = /home/tesla/cs/learning-project/level-ip
+# makefile (from 'Makefile', line 3)
+src = $(wildcard src/*.c)
+# default
+.LOADED := 
+# environment
+WSL_INTEROP = /run/WSL/5903_interop
+# environment
+PULSE_SERVER = /mnt/wslg/PulseServer
+# environment
+WT_SESSION = 13f4e1ed-4990-4689-98d7-9ed48ef0b841
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/tesla
+# makefile (from 'Makefile', line 5)
+headers = $(wildcard include/*.h)
+# environment
+LOGNAME = tesla
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+ZSH = /home/tesla/.oh-my-zsh
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from 'Makefile', line 4)
+obj = $(patsubst src/%.c, build/%.o, $(src))
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 3
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = tesla
+# makefile
+.DEFAULT_GOAL := lvl-ip
+# environment
+NAME = Code
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/sunhu/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
+# default
+MAKE_COMMAND := make
+# environment
+OLDPWD = /mnt/c/Users/sunhu/AppData/Local/Programs/Microsoft VS Code
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+VSCODE_HANDLES_SIGPIPE = true
+# environment
+WT_PROFILE_ID = {f184b75f-6c82-5ea5-9b3e-3203d66c5f82}
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# environment
+HOSTTYPE = x86_64
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+WAYLAND_DISPLAY = wayland-0
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# default
+.RECIPEPREFIX := 
+# environment
+X_VCPKG_ASSET_SOURCES = x-azurl,http://106.15.181.5/
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+WSL_DISTRO_NAME = Ubuntu20.04LTS
+# variable set hash-table stats:
+# Load=81/1024=8%, Rehash=0, Collisions=4/117=3%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# include (device 2064, inode 353844): 24 files, no impossibilities.
+# . (device 2064, inode 353782): 15 files, no impossibilities.
+# src (device 2064, inode 353867): 23 files, no impossibilities.
+
+# 62 files, no impossibilities in 3 directories.
+
+# Implicit Rules
+
+build/%.o: src/%.c include/icmpv4.h include/basic.h include/netdev.h include/tcp.h include/cli.h include/socket.h include/wait.h include/sock.h include/inet.h include/arp.h include/ethernet.h include/ip.h include/tuntap_if.h include/list.h include/dst.h include/route.h include/timer.h include/tcp_data.h include/utils.h include/skbuff.h include/ipc.h include/syshead.h
+#  recipe to execute (from 'Makefile', line 15):
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+# Not a target:
+apps/curl/curl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/sock.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/tcp_input.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/wait.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/timer.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/netdev.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+include/icmpv4.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/tcp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/dst.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+all: lvl-ip apps
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+
+# Not a target:
+include/cli.h:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+apps: apps/curl/curl
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 21):
+	$(MAKE) -C tools
+	$(MAKE) -C apps/curl
+	$(MAKE) -C apps/curl-poll
+
+# Not a target:
+include/skbuff.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+include/basic.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+include/tuntap_if.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+include/ipc.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+include/inet.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# makefile (from 'Makefile', line 17)
+debug: CFLAGS += -DDEBUG_SOCKET -DDEBUG_TCP -g -fsanitize=thread
+debug: lvl-ip
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=1/32=3%, Rehash=0, Collisions=0/2=0%
+
+# Not a target:
+include/syshead.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+test: debug apps
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 28):
+	@echo
+	@echo "Networking capabilites are required for test dependencies:"
+	which arping | sudo xargs setcap cap_net_raw=ep
+	which tc | sudo xargs setcap cap_net_admin=ep
+	@echo
+	cd tests && ./test-run-all
+
+# Not a target:
+src/skbuff.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+include/arp.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+include/ip.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+include/list.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+lvl-ip: build/skbuff.o build/socket.o build/ip_input.o build/icmpv4.o build/inet.o build/tcp.o build/cli.o build/sock.o build/tcp_output.o build/arp.o build/netdev.o build/utils.o build/tuntap_if.o build/ipc.o build/ip_output.o build/main.o build/dst.o build/tcp_input.o build/timer.o build/tcp_data.o build/route.o
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+#  recipe to execute (from 'Makefile', line 9):
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(obj) -o lvl-ip
+	@echo
+	@echo "lvl-ip needs CAP_NET_ADMIN:"
+	sudo setcap cap_setpcap,cap_net_admin=ep lvl-ip
+
+# Not a target:
+build/route.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/ethernet.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/socket.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/tcp_data.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/tcp.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+include/timer.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/sock.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/netdev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/icmpv4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/dst.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 36):
+	rm build/*.o lvl-ip
+
+# Not a target:
+build/ip_output.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/cli.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/tuntap_if.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/tcp_output.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/ipc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/inet.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/skbuff.o: src/skbuff.c include/icmpv4.h include/basic.h include/netdev.h include/tcp.h include/cli.h include/socket.h include/wait.h include/sock.h include/inet.h include/arp.h include/ethernet.h include/ip.h include/tuntap_if.h include/list.h include/dst.h include/route.h include/timer.h include/tcp_data.h include/utils.h include/skbuff.h include/ipc.h include/syshead.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'skbuff'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := build/skbuff.o
+# automatic
+# % := 
+# automatic
+# * := skbuff
+# automatic
+# + := src/skbuff.c include/icmpv4.h include/basic.h include/netdev.h include/tcp.h include/cli.h include/socket.h include/wait.h include/sock.h include/inet.h include/arp.h include/ethernet.h include/ip.h include/tuntap_if.h include/list.h include/dst.h include/route.h include/timer.h include/tcp_data.h include/utils.h include/skbuff.h include/ipc.h include/syshead.h
+# automatic
+# | := 
+# automatic
+# < := src/skbuff.c
+# automatic
+# ^ := src/skbuff.c include/icmpv4.h include/basic.h include/netdev.h include/tcp.h include/cli.h include/socket.h include/wait.h include/sock.h include/inet.h include/arp.h include/ethernet.h include/ip.h include/tuntap_if.h include/list.h include/dst.h include/route.h include/timer.h include/tcp_data.h include/utils.h include/skbuff.h include/ipc.h include/syshead.h
+# automatic
+# ? := src/skbuff.c include/icmpv4.h include/basic.h include/netdev.h include/tcp.h include/cli.h include/socket.h include/wait.h include/sock.h include/inet.h include/arp.h include/ethernet.h include/ip.h include/tuntap_if.h include/list.h include/dst.h include/route.h include/timer.h include/tcp_data.h include/utils.h include/skbuff.h include/ipc.h include/syshead.h
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/16=6%
+#  recipe to execute (from 'Makefile', line 15):
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+
+# Not a target:
+include/route.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+ 
+
+# Not a target:
+build/ip_input.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/utils.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/arp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/socket.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+include/tcp_data.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-22 11:14:01.09
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=54/1024=5%, Rehash=0, Collisions=8/141=6%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 115 / storage = 1263 B / avg = 10 B
+# current buf: size = 8162 B / used = 1263 B / count = 115 / avg = 10 B
+
+# strcache performance: lookups = 185 / hit rate = 37%
+# hash-table stats:
+# Load=115/8192=1%, Rehash=0, Collisions=3/185=2%
+# Finished Make data base on Thu Aug 11 10:33:11 2022
+
+ 

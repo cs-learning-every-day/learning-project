@@ -1,0 +1,29 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/tesla/cs/learning-project/level-ip'
+cc  -I include -Wall -Werror -pthread -c src/skbuff.c -o build/skbuff.o
+cc  -I include -Wall -Werror -pthread -c src/socket.c -o build/socket.o
+cc  -I include -Wall -Werror -pthread -c src/ip_input.c -o build/ip_input.o
+cc  -I include -Wall -Werror -pthread -c src/icmpv4.c -o build/icmpv4.o
+cc  -I include -Wall -Werror -pthread -c src/inet.c -o build/inet.o
+cc  -I include -Wall -Werror -pthread -c src/tcp.c -o build/tcp.o
+cc  -I include -Wall -Werror -pthread -c src/cli.c -o build/cli.o
+cc  -I include -Wall -Werror -pthread -c src/sock.c -o build/sock.o
+cc  -I include -Wall -Werror -pthread -c src/tcp_output.c -o build/tcp_output.o
+cc  -I include -Wall -Werror -pthread -c src/arp.c -o build/arp.o
+cc  -I include -Wall -Werror -pthread -c src/netdev.c -o build/netdev.o
+cc  -I include -Wall -Werror -pthread -c src/utils.c -o build/utils.o
+cc  -I include -Wall -Werror -pthread -c src/tuntap_if.c -o build/tuntap_if.o
+cc  -I include -Wall -Werror -pthread -c src/ipc.c -o build/ipc.o
+cc  -I include -Wall -Werror -pthread -c src/ip_output.c -o build/ip_output.o
+cc  -I include -Wall -Werror -pthread -c src/main.c -o build/main.o
+cc  -I include -Wall -Werror -pthread -c src/dst.c -o build/dst.o
+cc  -I include -Wall -Werror -pthread -c src/tcp_input.c -o build/tcp_input.o
+cc  -I include -Wall -Werror -pthread -c src/timer.c -o build/timer.o
+cc  -I include -Wall -Werror -pthread -c src/tcp_data.c -o build/tcp_data.o
+cc  -I include -Wall -Werror -pthread -c src/route.c -o build/route.o
+cc  -I include -Wall -Werror -pthread  build/skbuff.o  build/socket.o  build/ip_input.o  build/icmpv4.o  build/inet.o  build/tcp.o  build/cli.o  build/sock.o  build/tcp_output.o  build/arp.o  build/netdev.o  build/utils.o  build/tuntap_if.o  build/ipc.o  build/ip_output.o  build/main.o  build/dst.o  build/tcp_input.o  build/timer.o  build/tcp_data.o  build/route.o -o lvl-ip
+echo
+echo "lvl-ip needs CAP_NET_ADMIN:"
+sudo setcap cap_setpcap,cap_net_admin=ep lvl-ip
+make: Leaving directory '/home/tesla/cs/learning-project/level-ip'
+ 

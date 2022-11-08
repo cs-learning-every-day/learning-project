@@ -43,4 +43,18 @@ func TestGetRoute(t *testing.T) {
 
 	fmt.Printf("matched path: %s, params['name']: %s\n", n.pattern, ps["name"])
 
+	n, ps = r.getRoute("GET", "/assets/a/b")
+	if n == nil {
+		t.Fatal("nil shouldn't be returned")
+	}
+
+	if n.pattern != "/assets/*filepath" {
+		t.Fatal("should match /assets/*filepath")
+	}
+
+	if ps["filepath"] != "a/b" {
+		t.Fatal("name should be equal to 'a/b'")
+	}
+
+	fmt.Printf("matched path: %s, params['filepath']: %s\n", n.pattern, ps["filepath"])
 }

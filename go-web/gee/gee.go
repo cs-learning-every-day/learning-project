@@ -1,8 +1,10 @@
 package gee
 
 import (
+	"html/template"
 	"log"
 	"net/http"
+	"path"
 	"strings"
 )
 
@@ -16,8 +18,10 @@ type RouterGroup struct {
 }
 type Engine struct {
 	*RouterGroup
-	router *router
-	groups []*RouterGroup
+	router        *router
+	groups        []*RouterGroup
+	htmlTemplates *template.Template
+	funcMap       template.FuncMap
 }
 
 func New() *Engine {
@@ -25,6 +29,14 @@ func New() *Engine {
 	engine.RouterGroup = &RouterGroup{engine: engine}
 	engine.groups = []*RouterGroup{engine.RouterGroup}
 	return engine
+}
+
+func (e *Engine) SetFuncMap(funcMap template.FuncMap) {
+	e.funcMap = funcMap
+}
+
+func (e *Engine) LoadHTMLGlob(pattern string) {
+	e.htmlTemplates = template.Must(template.New("").Funcs(e.funcMap).ParseGlob(pattern))
 }
 
 func (e *Engine) addRoute(method string, pattern string, handler HandlerFunc) {
@@ -51,6 +63,7 @@ func (e *Engine) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 		}
 	}
 	c := newContext(w, req)
+	c.engine = e
 	c.handlers = middlewares
 	e.router.handle(c)
 }
@@ -82,4 +95,23 @@ func (g *RouterGroup) POST(pattern string, handler HandlerFunc) {
 
 func (g *RouterGroup) Use(middlewares ...HandlerFunc) {
 	g.middlewares = append(g.middlewares, middlewares...)
+}
+
+func (g *RouterGroup) createStaticHandler(relativePath string, fs http.FileSystem) HandlerFunc {
+	absolutePath := path.Join(g.prefix, relativePath)
+	fileServer := http.StripPrefix(absolutePath, http.FileServer(fs))
+	return func(ctx *Context) {
+		file := ctx.Param("filepath")
+		if _, err := fs.Open(file); err != nil {
+			ctx.Status(http.StatusNotFound)
+			return
+		}
+		fileServer.ServeHTTP(ctx.Writer, ctx.Req)
+	}
+}
+
+func (g *RouterGroup) Static(relativePath string, root string) {
+	handler := g.createStaticHandler(relativePath, http.Dir(root))
+	urlPattern := path.Join(relativePath, "/*filepath")
+	g.GET(urlPattern, handler)
 }

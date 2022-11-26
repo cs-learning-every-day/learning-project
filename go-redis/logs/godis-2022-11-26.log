@@ -1,0 +1,31 @@
+[INFO][server.go:37] 2022/11/26 20:26:42 bind: 0.0.0.0:6379, start listening...
+[INFO][server.go:65] 2022/11/26 20:27:21 accepted link
+[INFO][handler.go:54] 2022/11/26 20:27:37 connection closed: 172.28.240.1:2498
+[INFO][server.go:65] 2022/11/26 20:27:43 accepted link
+[INFO][handler.go:54] 2022/11/26 20:27:44 connection closed: 172.28.240.1:2501
+[INFO][server.go:46] 2022/11/26 20:27:49 shutting down
+[INFO][handler.go:86] 2022/11/26 20:27:49 handler shutting down
+[INFO][server.go:37] 2022/11/26 20:27:54 bind: 0.0.0.0:6379, start listening...
+[INFO][server.go:65] 2022/11/26 20:28:01 accepted link
+[ERROR][parser.go:41] 2022/11/26 20:28:21 goroutine 51 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+go-redis/resp/parser.parse0.func1()
+	/home/tesla/cs/learning-project/go-redis/resp/parser/parser.go:41 +0x2a
+panic({0x503280, 0xc0000d4048})
+	/usr/local/go/src/runtime/panic.go:884 +0x212
+go-redis/resp/parser.parseSingleLineReply({0xc0000bc3e8, 0x2, 0x0?})
+	/home/tesla/cs/learning-project/go-redis/resp/parser/parser.go:195 +0x236
+go-redis/resp/parser.parse0({0x7f677804afc8?, 0xc000198000?}, 0x0?)
+	/home/tesla/cs/learning-project/go-redis/resp/parser/parser.go:96 +0x47b
+created by go-redis/resp/parser.ParseStream
+	/home/tesla/cs/learning-project/go-redis/resp/parser/parser.go:34 +0x98
+
+[INFO][server.go:46] 2022/11/26 20:29:32 shutting down
+[INFO][handler.go:86] 2022/11/26 20:29:32 handler shutting down
+[INFO][server.go:37] 2022/11/26 20:29:49 bind: 0.0.0.0:6379, start listening...
+[INFO][server.go:65] 2022/11/26 20:29:55 accepted link
+[INFO][handler.go:54] 2022/11/26 20:31:26 connection closed: 172.28.240.1:2521
+[INFO][server.go:46] 2022/11/26 20:31:29 shutting down
+[INFO][handler.go:86] 2022/11/26 20:31:29 handler shutting down
+[INFO][handler.go:86] 2022/11/26 20:31:29 handler shutting down

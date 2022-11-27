@@ -1,6 +1,7 @@
 package database
 
 import (
+	"go-redis/aof"
 	"go-redis/config"
 	"go-redis/interface/resp"
 	"go-redis/lib/logger"
@@ -10,7 +11,8 @@ import (
 )
 
 type Database struct {
-	dbSet []*DB
+	dbSet      []*DB
+	aofHandler *aof.AofHandler
 }
 
 func NewDatabase() *Database {
@@ -23,6 +25,19 @@ func NewDatabase() *Database {
 		db := makeDB()
 		db.index = i
 		database.dbSet[i] = db
+	}
+	if config.Properties.AppendOnly {
+		aofHandler, err := aof.NewAofHandler(database)
+		if err != nil {
+			panic(err)
+		}
+		database.aofHandler = aofHandler
+		for _, db := range database.dbSet {
+			sdb := db
+			sdb.addAof = func(cmd CmdLine) {
+				database.aofHandler.AddAof(sdb.index, cmd)
+			}
+		}
 	}
 	return database
 }
@@ -41,9 +56,12 @@ func (d *Database) Exec(client resp.Connection, args [][]byte) resp.Reply {
 		if len(args) != 2 {
 			return reply.MakeArgNumErrReply(cmdName)
 		}
-		execSelect(client, d, args[1:])
+		return execSelect(client, d, args[1:])
 	}
 	dbIndex := client.GetDBIndex()
+	if dbIndex >= len(d.dbSet) {
+		return reply.MakeErrReply("ERR DB index is out of range")
+	}
 	db := d.dbSet[dbIndex]
 	return db.Exec(client, args)
 }

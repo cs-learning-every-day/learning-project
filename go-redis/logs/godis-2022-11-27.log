@@ -62,3 +62,9 @@ created by go-redis/resp/parser.ParseStream
 [INFO][server.go:46] 2022/11/27 16:37:33 shutting down
 [INFO][handler.go:86] 2022/11/27 16:37:33 handler shutting down
 [INFO][handler.go:86] 2022/11/27 16:37:33 handler shutting down
+[INFO][server.go:37] 2022/11/27 18:39:34 bind: 0.0.0.0:6379, start listening...
+[INFO][server.go:46] 2022/11/27 18:39:37 shutting down
+[INFO][handler.go:86] 2022/11/27 18:39:37 handler shutting down
+[INFO][server.go:37] 2022/11/27 19:19:57 bind: 0.0.0.0:6379, start listening...
+[INFO][server.go:46] 2022/11/27 19:19:58 shutting down
+[INFO][handler.go:86] 2022/11/27 19:19:58 handler shutting down

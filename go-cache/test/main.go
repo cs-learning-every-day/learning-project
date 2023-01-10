@@ -1,17 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	gocache "go-cache"
+	"log"
+	"net/http"
+)
 
-type User struct {
-	Name string
-}
-
-func update(u *User) {
-	u.Name = "Tesla"
+var db = map[string]string{
+	"Tom":  "630",
+	"Jack": "589",
+	"Sam":  "567",
 }
 
 func main() {
-	var u User
-	update(&u)
-	fmt.Println(u.Name)
+	gocache.NewGroup("scores", 2<<10, gocache.GetterFunc(
+		func(key string) ([]byte, error) {
+			log.Println("[SlowDB] search key", key)
+			if v, ok := db[key]; ok {
+				return []byte(v), nil
+			}
+			return nil, fmt.Errorf("%s not exist", key)
+		}))
+	addr := "localhost:9999"
+	peers := gocache.NewHTTPPool(addr)
+	log.Println("gocache is running at", addr)
+	log.Fatal(http.ListenAndServe(addr, peers))
 }

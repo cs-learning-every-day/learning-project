@@ -1,4 +1,4 @@
-module XmGoCache
+module xmorm
 
 go 1.18
 
